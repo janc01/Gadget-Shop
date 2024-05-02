@@ -161,11 +161,21 @@ public class GadgetShop implements ActionListener {
     }
 
     private void makeACall() {
-        // Implement making a call, ensure the selected gadget is a Mobile
+        String phoneNumber = phoneNumberTextbox.getText();  // Get the phone number from the text box
+        if (phoneNumber.isEmpty()) {  // Check if the phone number is entered
+        JOptionPane.showMessageDialog(frame, "Please add a phone number.");  // Prompt user to enter the phone number
+        } else {
+        JOptionPane.showMessageDialog(frame, "Phone number added. Ready to make a call.");  // Acknowledge that the phone number is added
+        }
     }
 
     private void downloadMusic() {
-        // Implementation needed
+        String downloadSize = downloadSizeTextbox.getText();  // Get the download size from the text box
+        if (downloadSize.isEmpty()) {  // Check if the download size is entered
+        JOptionPane.showMessageDialog(frame, "Please enter the download size for music.");  // Prompt user to enter the download size
+        } else {
+        JOptionPane.showMessageDialog(frame, "Download size added. Ready to download music.");  // Acknowledge that the download size is ready for downloading music
+        }
     }
     //Display all gadgets
     private void viewAll() {
